@@ -6,9 +6,10 @@
   */
 package TwitterSentimentAnalysis
 
-import TwitterSentimentAnalysis.twitterClassifiers.sentimentClassifier
+import TwitterSentimentAnalysis.twitterClassifiers.{sentimentClassifier, sentimentClassifier2}
 import twitter.datastructures.Tweet
 import twitter.tweet.TweetReader
+import twitterDataModel._
 
 import scala.collection.JavaConversions._
 /** Created by guest on 10/2/16.
@@ -23,6 +24,6 @@ object SentimentApp extends App {
   sentimentClassifier.learn(10)
   sentimentClassifier.test()
   //sentimentClassifier.crossValidation(3)
-  sentimentClassifier.classifier.discreteValue(new Tweet("here is my tweet."))
+  sentimentClassifier2.classifier.discreteValue(new Tweet("here is my tweet."))
   sentimentClassifier.save()
 }

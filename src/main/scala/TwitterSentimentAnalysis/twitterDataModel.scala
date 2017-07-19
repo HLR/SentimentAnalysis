@@ -7,9 +7,10 @@
 package TwitterSentimentAnalysis
 
 import edu.illinois.cs.cogcomp.saul.datamodel.DataModel
+import edu.illinois.cs.cogcomp.saulexamples.nlp.BaseTypes.{Document, Sentence, Token}
 import sensors._
 import twitter.datastructures.Tweet
-
+import edu.illinois.cs.cogcomp.saulexamples.nlp.LanguageBaseTypeSensors._
 import scala.collection.JavaConversions._
 /** Created by guest on 10/2/16.
   */
@@ -21,7 +22,8 @@ object twitterDataModel extends DataModel {
   val tokens =node[Token]
 
   val tweetToDoc = edge(tweet,documents)
-  tweetToDoc.addSensor(generateDocFromTweet _)
+
+   tweetToDoc.addSensor(generateDocFromTweet _)
 
   val docToSentence = edge(documents,sentences)
   docToSentence.addSensor(documentToSentenceGenerating _)

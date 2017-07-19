@@ -8,9 +8,9 @@ package TwitterSentimentAnalysis
 
 import edu.illinois.cs.cogcomp.lbjava.learn.SparseNetworkLearner
 import edu.illinois.cs.cogcomp.saul.classifier.Learnable
+import edu.illinois.cs.cogcomp.saul.learn.MultilayerPerceptron
 import twitter.datastructures.Tweet
 import twitterDataModel._
-import weka.classifiers.functions.MultilayerPerceptron
 /** Created by guest on 10/2/16.
   */
 object twitterClassifiers {

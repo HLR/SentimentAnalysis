@@ -1,5 +1,6 @@
 package TwitterSentimentAnalysis
 
+import edu.illinois.cs.cogcomp.saulexamples.nlp.BaseTypes.Document
 import twitter.datastructures.Tweet
 
 /**

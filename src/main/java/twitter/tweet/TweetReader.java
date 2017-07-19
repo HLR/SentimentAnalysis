@@ -7,7 +7,8 @@
 package twitter.tweet;
 
 import edu.illinois.cs.cogcomp.core.io.LineIO;
-import edu.illinois.cs.cogcomp.saulexamples.twitter.datastructures.Tweet;
+import twitter.datastructures.Tweet;
+
 
 import java.io.IOException;
 import java.util.ArrayList;
