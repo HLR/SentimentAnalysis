@@ -55,7 +55,7 @@ public class Tweet {
     public String getText() { return text; }
 
     public String getSentimentLabel() {
-        return (sentimentLabel.equals("0")) ? "negative" : "positive";
+        return sentimentLabel.equals("0") ? "negative" : ( sentimentLabel.equals("2") ? "neutral" : "positive");
     }
 
     private String stripQuotes(String str) {

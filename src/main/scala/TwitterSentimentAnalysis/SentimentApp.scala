@@ -19,11 +19,11 @@ object SentimentApp extends App {
   val TrainReader = new TweetReader("./data/twitter/train50k.csv.gz")
   val TestReader = new TweetReader("./data/twitter/test.csv.gz")
 
-  tweet.populate(TrainReader.tweets.toList.slice(321,322))
+  tweet.populate(TrainReader.tweets.toList)
   tweet.populate(TestReader.tweets.toList, train = false)
-  sentimentClassifier.learn(10)
+  sentimentClassifier.learn(1)
   sentimentClassifier.test()
   //sentimentClassifier.crossValidation(3)
-  sentimentClassifier2.classifier.discreteValue(new Tweet("here is my tweet."))
+  //sentimentClassifier2.classifier.discreteValue(new Tweet("here is my tweet."))
   sentimentClassifier.save()
 }
