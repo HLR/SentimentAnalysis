@@ -66,8 +66,8 @@ object twitterDataModel extends DataModel {
       try {
         val xml_string = get("http://trips.ihmc.us/parser/cgi/parse?input=" + http_input);
         val pattern = "(?<=<LF:indicator>F<\\/LF:indicator>\\n\\s{4}<LF:type>)(.*)(?=<\\/LF:type>)".r
-        pattern.findAllIn(xml_string).foreach(println)
-        Console.print()
+       // pattern.findAllIn(xml_string).foreach(println)
+       // Console.print()
         result = pattern.findAllIn(xml_string).toList;
       }catch{
         case ex: MalformedURLException => {
